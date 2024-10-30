@@ -10,8 +10,11 @@ import { LOGIN_USER } from '../pages/LogInPage/LogInPage';
 import { userFetching } from './store/slices/userSlice';
 import { useAppDispatch } from './store/hooks/redux';
 import ScrollToTop from '../shared/lib/scrollToTop/scrollToTop';
+import useWindowWidth from '../shared/lib/useWindowWidth/useWindowWidth';
 
 function App() {
+	const windowWidth = useWindowWidth();
+	const isMobileView = windowWidth <= 767.98;
 	const { theme } = useTheme();
 	const dispatch = useAppDispatch();
 
@@ -23,6 +26,10 @@ function App() {
 			dispatch(userFetching(user));
 		}
 	}, []);
+
+	useEffect(() => {
+		setIsOpen(false);
+	}, [isMobileView]);
 
 	return (
 		<IsOpenContext.Provider value={{ isOpen, setIsOpen }}>

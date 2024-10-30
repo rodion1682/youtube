@@ -1,8 +1,6 @@
 import cls from './Sidebar.module.scss';
 import { ReactComponent as HomeIcon } from '../../shared/assets/home.svg';
 import { ReactComponent as LikeIcon } from '../../shared/assets/like.svg';
-import { ReactComponent as YouIcon } from '../../shared/assets/you.svg';
-import { ReactComponent as WatchLaterIcon } from '../../shared/assets/watchLater.svg';
 import { ReactComponent as TrendingIcon } from '../../shared/assets/trend.svg';
 import { ReactComponent as GamingIcon } from '../../shared/assets/gaming.svg';
 import { classNames } from '../../shared/lib/classNames/classNames';
@@ -34,10 +32,6 @@ const Sidebar: FC<SidebarProps> = ({ className }) => {
 	}
 
 	const { isOpen, setIsOpen } = context;
-
-	if (isMobileView) {
-		setIsOpen(false);
-	}
 
 	const handleActive = (text: string) => {
 		setIsActive(text);
