@@ -1,0 +1,87 @@
+@import "../../app/styles/variables/media.scss";
+.VideoItem {
+	color: var(--primary-color);
+	&__image_ibg {
+		border-radius: 8px;
+		overflow: hidden;
+		padding-bottom: 50%;
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	&__bottom {
+		display: flex;
+		gap: 20px;
+	}
+	&__description {
+		flex: 1 1 auto;
+	}
+	&__title {
+		flex: 1 1 auto;
+		font: var(--font-l);
+		font-weight: 500;
+		&:not(:last-child) {
+			margin: 0px 0px 8px 0px;
+		}
+	}
+	&__name {
+		&:not(:last-child) {
+			margin: 0px 0px 8px 0px;
+		}
+	}
+	&__info {
+		color: var(--secondary-color);
+		gap: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__views {
+	}
+	&__date {
+	}
+}
+
+.vertical {
+	display: flex;
+	flex-direction: column;
+}
+.horizontal {
+	display: flex;
+	gap: 20px;
+	@media (max-width: $md5) {
+		flex-wrap: wrap;
+	}
+	.VideoItem__image_ibg {
+		flex: 0 0 40%;
+		padding-bottom: 23%;
+		height: fit-content;
+		&:not(:last-child) {
+			margin: 0px 0px 0px 0px;
+		}
+		@media (max-width: $md5) {
+			flex: 1 1 100%;
+			padding-bottom: 50%;
+			&:not(:last-child) {
+				margin: 0px -15px 10px -15px;
+			}
+		}
+	}
+	.VideoItem__avatar {
+		flex: 0 0 0px;
+		height: 0px;
+		width: 0px;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+		min-width: 0px;
+		max-width: 0px;
+		min-height: 0px;
+		max-height: 0px;
+	}
+	.VideoItem__description {
+		@media (min-width: $md5) {
+			padding-right: 15px;
+		}
+	}
+}

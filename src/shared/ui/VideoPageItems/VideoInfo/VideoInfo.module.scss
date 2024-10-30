@@ -1,0 +1,108 @@
+@import "../../../../app/styles/variables/media.scss";
+
+.VideoInfo {
+	color: var(--primary-color);
+	&__title {
+		font: var(--font-xl);
+		font-weight: 500;
+		&:not(:last-child) {
+			margin: 0px 0px 15px 0px;
+		}
+	}
+	&__bottom {
+		gap: 20px;
+		@media (min-width: $md4) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	&__chanel {
+		@media (max-width: $md4) {
+			&:not(:last-child) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+		@media (min-width: $md5) {
+			flex: 1 1 auto;
+			display: flex;
+			gap: 20px;
+			justify-content: space-between;
+		}
+	}
+	&__info {
+		display: flex;
+		gap: 20px;
+		@media (max-width: $md5) {
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+	}
+	&__detail {
+	}
+	&__name {
+		font: var(--font-l);
+	}
+	&__counter {
+		display: flex;
+		gap: 8px;
+	}
+	&__subscribe {
+		@media (max-width: $md5) {
+			width: 100%;
+		}
+	}
+	&__buttons {
+		display: flex;
+		@media (max-width: $md4) {
+			justify-content: flex-end;
+		}
+	}
+	&__button {
+		border-radius: 40px 0px 0px 40px;
+		color: var(--primary-color);
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		background-color: var(--border-color);
+		padding: 8px 15px;
+		position: relative;
+		transition: all 0.3s ease 0s;
+		&::after {
+			content: "";
+			position: absolute;
+			right: -1px;
+			top: 10px;
+			height: 36px;
+			width: 1px;
+			background-color: var(--primary-color);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--primary-color);
+				color: var(--bg-color);
+				div {
+					svg {
+						path {
+							fill: var(--bg-color);
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: $md5) {
+			width: 100%;
+		}
+		span {
+			font: var(--font-l);
+			display: inline-block;
+		}
+		&_dislike {
+			transform: rotate(-180deg);
+		}
+	}
+}

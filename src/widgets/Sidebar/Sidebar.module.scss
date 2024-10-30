@@ -1,0 +1,98 @@
+@import "../../app/styles/variables/media.scss";
+.Sidebar {
+	overflow-y: auto;
+	z-index: var(--sidebar-z-index);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: var(--sidebar-width);
+	height: 100vh;
+	background-color: var(--bg-color);
+	padding: 15px 0px;
+	display: flex;
+	flex-direction: column;
+	transition: width 0.3s ease 0s;
+
+	&__content {
+		margin-bottom: auto;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@media (max-width: $md4) {
+		left: -100%;
+		top: var(--navbar-height);
+		position: absolute;
+		width: 100%;
+		transition: left 0.3s ease 0s;
+		height: calc(100% - var(--navbar-height));
+	}
+}
+
+.Burger {
+	margin-left: 18.5px;
+}
+
+.hoverIcon {
+	text-align: center;
+	gap: 5px;
+	padding: 15px 15px;
+	margin: 0px 8px;
+	flex: 1 1 100%;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: transparent;
+	transition: background-color 0.3s ease 0s;
+	@media (min-width: $md4) {
+		flex-direction: column;
+		span {
+			transition: opacity 0.3s ease 0s;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	&__active {
+		background-color: var(--bg-hover);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--bg-hover);
+		}
+	}
+}
+
+.collapsed {
+	@media (min-width: $md4) {
+		width: var(--sidebar-width-collapsed);
+	}
+	@media (max-width: $md4) {
+		left: 0;
+	}
+	.hoverIcon {
+		flex-direction: row;
+		span {
+			width: auto;
+			height: auto;
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+	.Bottom {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		margin-left: 15px;
+	}
+}
+
+.Bottom {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+	&__hoverIcon {
+	}
+}

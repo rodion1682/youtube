@@ -1,0 +1,44 @@
+@import "../../app/styles/variables/media.scss";
+
+.MainPage {
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	position: relative;
+	height: calc(100% - 150px);
+	padding: 25px 30px 50px;
+	border-top-left-radius: 8px;
+	background-color: var(--secondary-bg-color);
+	@media (max-width: $md3) {
+		padding: 15px 15px 50px;
+	}
+	&__label {
+		flex: 1 1 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: var(--primary-color);
+		font: var(--font-xl);
+	}
+}
+
+.MainPageLoader {
+	position: absolute;
+	left: calc(50% - 24px);
+	top: calc(50% - 24px);
+}
+
+.item {
+	flex: 0 1 calc(25% - 22.5px);
+	@media (max-width: $md1) {
+		flex: 0 1 calc(33.333% - 22.5px);
+	}
+	@media (max-width: $md2) {
+		flex: 0 1 calc(50% - 22.5px);
+	}
+	@media (max-width: $md3) {
+		flex: 0 1 100%;
+	}
+}

@@ -1,0 +1,18 @@
+.DisplayUserIcon {
+	max-width: 81px;
+	width: 100%;
+	overflow: hidden;
+	&__user {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	&__avatar {
+	}
+	&__name {
+		color: var(--primary-color);
+		font-weight: 500;
+	}
+	&__signin {
+	}
+}

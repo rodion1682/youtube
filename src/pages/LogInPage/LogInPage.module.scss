@@ -1,0 +1,47 @@
+.LogInPage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100vh - var(--navbar-height));
+	color: var(--primary-color);
+	&__content {
+		max-width: 320px;
+		padding: 0px 15px;
+	}
+	&__spaceBetween,
+	&__title {
+		font: var(--font-xl);
+		font-weight: 500;
+		text-align: center;
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	&__signIn {
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	&__input {
+		color: var(--primary-color);
+		width: 100%;
+		background-color: transparent;
+		border: 1px solid var(--primary-color);
+		padding: 8px 15px;
+		border-radius: 8px;
+		outline: transparent;
+		transition: border 0.3s ease 0s;
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+		&_active {
+			border: 1px solid var(--input-hint);
+		}
+	}
+	&__signUp {
+	}
+	&__button {
+		display: flex;
+		margin: 0 auto;
+	}
+}

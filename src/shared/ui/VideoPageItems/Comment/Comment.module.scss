@@ -1,0 +1,56 @@
+@import "../../../../app/styles/variables/media.scss";
+
+.Comment {
+	display: flex;
+	gap: 20px;
+	&__content {
+		flex: 1 1 auto;
+		color: var(--primary-color);
+	}
+	&__info {
+		@media (min-width: $md5) {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			&:not(:last-child) {
+				margin: 0px 0px 8px 0px;
+			}
+		}
+		@media (max-width: $md5) {
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+	}
+	&__name {
+		font-weight: 500;
+		font: var(--font-l);
+		@media (max-width: $md5) {
+			&:not(:last-child) {
+				margin: 0px 0px 3px 0px;
+			}
+		}
+	}
+	&__date {
+		color: var(--secondary-color);
+	}
+	&__text {
+		margin: 0px 0px 10px 0px;
+		@media (max-width: $md5) {
+			margin: 0px 0px 10px -65px;
+		}
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	&__like {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		&_rotate {
+			transform: rotate(-180deg);
+		}
+	}
+}

@@ -1,0 +1,24 @@
+.SvgIcon {
+	position: relative;
+
+	svg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+
+		path {
+			fill: var(--primary-color);
+		}
+	}
+}
+.size_m {
+	min-width: var(--svg-size-m);
+	min-height: var(--svg-size-m);
+}
+
+.size_xl {
+	min-width: var(--svg-size-xl);
+	min-height: var(--svg-size-xl);
+}

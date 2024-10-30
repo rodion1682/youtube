@@ -1,0 +1,43 @@
+@import "../../app/styles/variables/media.scss";
+
+.VideoPage {
+	min-height: 100vh;
+	padding: 15px;
+	@media (min-width: $md1) {
+		display: flex;
+		gap: 40px;
+	}
+	&__info,
+	&__description,
+	&__comment {
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	&__player {
+		margin: 0px 0px 20px 0px;
+		@media (max-width: $md4) {
+			margin: 0px -15px 20px -15px;
+		}
+	}
+	&__contenct {
+		@media (min-width: $md1) {
+			flex: 0 1 70%;
+		}
+		@media (max-width: $md1) {
+			&:not(:last-child) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+	&__recommendations {
+		@media (min-width: $md1) {
+			flex: 0 1 30%;
+		}
+	}
+	&__sideVideo {
+		&:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+	}
+}

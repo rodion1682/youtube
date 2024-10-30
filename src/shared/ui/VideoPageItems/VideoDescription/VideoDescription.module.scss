@@ -1,0 +1,47 @@
+@import "../../../../app/styles/variables/media.scss";
+.VideoDescription {
+	padding: 15px;
+	background-color: var(--bg-hover);
+	border-radius: 8px;
+	&__info {
+		color: var(--secondary-color);
+		@media (min-width: $md5) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 20px;
+		}
+		&:not(:last-child) {
+			margin: 0px 0px 10px 0px;
+		}
+	}
+	&__items {
+		display: flex;
+		gap: 20px;
+		@media (max-width: $md5) {
+			&:not(:last-child) {
+				margin: 0px 0px 10px 0px;
+			}
+		}
+	}
+	&__toggleButton {
+		color: var(--primary-color);
+		border: 1px solid var(--primary-color);
+		padding: 5px 15px;
+		border-radius: 8px;
+		transition: border 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid var(--input-hint);
+			}
+		}
+	}
+	&__text {
+		color: var(--primary-color);
+		p {
+			&:not(:last-child) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+}

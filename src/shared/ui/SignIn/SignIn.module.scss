@@ -1,0 +1,17 @@
+.SignIn {
+	padding: 5px 15px;
+	background-color: transparent;
+	border: 1px solid var(--input-hint);
+	color: var(--input-hint);
+	border-radius: 8px;
+	font-weight: 500;
+	width: fit-content;
+	transition: all 0.3s ease 0s;
+	min-width: 81px;
+	@media (any-hover: hover) {
+		&:hover {
+			border: 1px solid var(--primary-color);
+			color: var(--primary-color);
+		}
+	}
+}

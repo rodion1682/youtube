@@ -1,0 +1,50 @@
+@import "reset";
+@import "variables/base";
+@import "variables/global";
+@import "variables/media";
+@import "themes/light";
+@import "themes/dark";
+@import "themes/dark";
+
+html {
+	overflow-x: hidden;
+	@media (max-width: $md4) {
+		&.active {
+			overflow-y: hidden;
+		}
+	}
+}
+
+body {
+	overflow-x: hidden;
+	font: var(--font-m);
+	color: var(--primary-color);
+}
+
+.app {
+	background: var(--bg-color);
+	min-height: 100vh;
+}
+
+.main {
+	margin-left: auto;
+	@media (min-width: $md4) {
+		width: calc(100% - var(--sidebar-width));
+	}
+	transition: width 0.3s ease 0s;
+	&__reduced {
+		@media (min-width: $md4) {
+			width: calc(100% - var(--sidebar-width-collapsed));
+		}
+	}
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--border-color);
+}

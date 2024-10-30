@@ -1,0 +1,35 @@
+.Button {
+	cursor: pointer;
+	padding: 6px 10px;
+}
+
+.clear {
+	padding: 0;
+	border: none;
+	background: none;
+	outline: transparent;
+}
+.theme {
+	padding: 15px;
+	border: none;
+	outline: transparent;
+}
+
+.subscribe {
+	text-transform: capitalize;
+	color: var(--bg-color);
+	font-weight: 500;
+	font: var(--font-l);
+	padding: 8px 15px;
+	border-radius: 40px;
+	background-color: var(--primary-color);
+	transition: all 0.3s ease 0s;
+	border: 1px solid transparent;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--bg-color);
+			color: var(--primary-color);
+			border: 1px solid var(--primary-color);
+		}
+	}
+}
