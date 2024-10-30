@@ -9,7 +9,6 @@ export enum AppRoutes {
 	MAIN_TREND = 'main_trend',
 	MAIN_GAMING = 'main_gaming',
 	LIKED_VIDEOS = 'liked_videos',
-	MAIN_SUB = 'main_sub',
 	VIDEO = 'video',
 	LOGIN = 'login',
 	NOT_FOUND = 'not_found',
@@ -19,17 +18,15 @@ export enum MainPageTypes {
 	RANDOM = 'random',
 	TREND = 'trend',
 	GAMING = 'gaming',
-	SUB = 'sub',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-	[AppRoutes.MAIN_RANDOM]: `/`,
-	[AppRoutes.MAIN_TREND]: '/trend',
-	[AppRoutes.MAIN_GAMING]: '/gaming',
-	[AppRoutes.MAIN_SUB]: '/sub',
-	[AppRoutes.LIKED_VIDEOS]: '/likedVideos',
-	[AppRoutes.VIDEO]: '/video',
-	[AppRoutes.LOGIN]: '/login',
+	[AppRoutes.MAIN_RANDOM]: `youtube/`,
+	[AppRoutes.MAIN_TREND]: 'youtube/trend',
+	[AppRoutes.MAIN_GAMING]: 'youtube/gaming',
+	[AppRoutes.LIKED_VIDEOS]: 'youtube/likedVideos',
+	[AppRoutes.VIDEO]: '/youtube/video',
+	[AppRoutes.LOGIN]: 'youtube/login',
 	[AppRoutes.NOT_FOUND]: '*',
 };
 
@@ -46,16 +43,12 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
 		path: RoutePath.main_gaming,
 		element: <MainPage type={MainPageTypes.GAMING} />,
 	},
-	[AppRoutes.MAIN_SUB]: {
-		path: RoutePath.main_sub,
-		element: <MainPage type={MainPageTypes.SUB} />,
-	},
 	[AppRoutes.LIKED_VIDEOS]: {
 		path: RoutePath.liked_videos,
 		element: <LikedVideos />,
 	},
 	[AppRoutes.VIDEO]: {
-		path: '/video/:type/:id',
+		path: 'youtube/video/:type/:id',
 		element: <VideoPage />,
 	},
 	[AppRoutes.LOGIN]: {
