@@ -11,6 +11,7 @@
 	}
 	&__bottom {
 		gap: 20px;
+		flex-wrap: wrap;
 		@media (min-width: $md4) {
 			display: flex;
 			align-items: center;

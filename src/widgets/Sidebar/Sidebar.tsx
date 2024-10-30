@@ -35,6 +35,10 @@ const Sidebar: FC<SidebarProps> = ({ className }) => {
 
 	const { isOpen, setIsOpen } = context;
 
+	if (isMobileView) {
+		setIsOpen(false);
+	}
+
 	const handleActive = (text: string) => {
 		setIsActive(text);
 		if (isMobileView) {

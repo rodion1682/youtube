@@ -6,6 +6,7 @@ import { ReactComponent as LikeIcon } from '../../../assets/like.svg';
 import cls from './VideoInfo.module.scss';
 import { roundNumber } from '../../../lib/roundNumber/roundNumber';
 import { SetLikedVideos } from '../../../../app/services/localStorage/likedVideos.service';
+import { useAppSelector } from '../../../../app/store/hooks/redux';
 
 interface VideoInfoProps {
 	className?: string;
